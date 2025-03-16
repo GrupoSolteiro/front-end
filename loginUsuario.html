@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/loginUsuario.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="pattern"></div>
+        </div>
+        <div class="right-panel">
+            <h1>Bom dia, Antônio.</h1>
+            <form id="form-login" novalidate>
+                <label for="input-credecial">Email ou Nome:</label>
+                <input type="text" id="input-credencial" placeholder="Digite seu email ou seu nome aqui." required>
+
+                <label for="input-senha">Senha:</label>
+                <div class="password-container">
+                    <input type="password" id="input-senha" placeholder="Digite sua senha aqui." required>
+                    <span class="toggle-password"></span>
+                </div>
+
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me" checked>
+                    <div class="div-checkbox-text">
+                        <label for="remember-me">Permanecer conectado</label>
+                    </div>
+                </div>
+
+                <div class="button-submit">
+                    <button type="submit" id="btn-login">Entrar</button>
+                </div>
+            </form>
+            <p class="login-help">Problemas no Login? <a href="#">Clique aqui.</a></p>
+
+            <div class="login-status"></div>
+        </div>
+    </div>
+    <script src="js/loginUsuario.js"></script>
+</body>
+
+</html>

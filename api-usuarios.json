@@ -1,0 +1,28 @@
+{
+  "usuarios": [
+    {
+      "id": "f24e",
+      "nome": "Lucas",
+      "email": "lucas@gmail.com",
+      "senha": "24"
+    },
+    {
+      "id": "ecb1",
+      "nome": "kaique",
+      "email": "kaique@gmail.com",
+      "senha": "123"
+    },
+    {
+      "id": "4a9b",
+      "nome": "daniel",
+      "email": "daniel@gmail.com",
+      "senha": "123456"
+    },
+    {
+      "id": "3688",
+      "nome": "Brenno",
+      "email": "brenno@gmail.com",
+      "senha": "000000"
+    }
+  ]
+}

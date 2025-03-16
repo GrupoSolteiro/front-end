@@ -1,0 +1,182 @@
+@import url(fontFamily.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: "Crimson Text", serif;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.left-panel {
+    width: 40%;
+    background-color: rgba(7, 64, 218, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pattern {
+    width: 80%;
+    height: 80%;
+    background-image: url('../assets/img/box.png');
+    opacity: 0.5;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.right-panel {
+    width: 60%;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3% 0 0 0;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+form {
+    background: white;
+    padding: 5% 5% 2% 5%;
+    margin-top: 3%;
+    border-radius: 20px;
+    border: solid rgba(217, 217, 217, 1) 2px;
+    width: 60%;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+#input-senha, #input-credencial {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(235, 235, 235, 1);
+    color: rgba(121, 121, 121, 1);
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    width: 20px;
+    height: 20px;
+    background-image: url("../assets/img/closedEye.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.visible {
+    background-image: url("../assets/img/openedEye.png");    /* A IMAGEM AINDA NÃO EXISTE  */
+}
+
+.div-checkbox-text {
+    margin-bottom: 10px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.button-submit {
+    display: flex;
+    justify-content: center;
+    button {
+        width: 40%;
+        padding: 10px;
+        margin-top: 10%;
+        background-color: rgba(201, 231, 255, 1);
+        border: none;
+        color: rgba(13, 138, 255, 1);
+        font-size: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 700;
+        font-family: "Inter", sans-serif
+    }
+    
+    button:hover {
+        background-color: rgba(152, 209, 255, 1); 
+        color: rgba(13, 138, 255, 1);
+    }
+}
+
+.login-help {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.login-help a {
+    color: black;
+    font-weight: bold;
+}
+
+.login-help a:hover {
+    text-decoration: underline;
+}
+
+.login-status {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    width: 60%;
+}
+
+.sucesso {
+    background-color: rgba(210, 255, 201, 1);
+    color: rgba(25, 215, 0, 1);
+    border: none;
+}
+
+.erro {
+    background-color: rgba(255, 201, 201, 1);
+    color: rgba(255, 13, 13, 1);
+    border: none;
+}
+
+.input-error {
+    border: solid rgba(255, 13, 13, 1) 2px !important;
+}
+
+.aviso {
+    background-color: rgba(255, 250, 201, 1);
+    color: rgba(255, 142, 13, 1);
+    border: none;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/cadastroUsuario.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="pattern"></div>
+        </div>
+        <div class="right-panel">
+            <h1>Cadastro</h1>
+            <form id="form-cadastro" novalidate>
+                <label for="input-nome">Nome:</label>
+                <input type="text" id="input-nome" placeholder="Digite seu nome aqui." required>
+
+                <label for="input-email">Email:</label>
+                <input type="email" id="input-email" placeholder="Digite seu email aqui." required>
+
+                <label for="input-senha">Senha:</label>
+                <div class="password-container">
+                    <input type="password" id="input-senha" placeholder="Digite sua senha aqui." required>
+                    <span class="toggle-password"></span>
+                </div>
+
+                <label for="input-confirm-senha">Confirme sua Senha:</label>
+                <div class="password-container">
+                    <input type="password" id="input-confirm-senha" placeholder="Confirme sua senha aqui." required>
+                    <span class="toggle-confirm-password"></span>
+                </div>
+
+                <div class="button-submit">
+                    <button type="submit" id="btn-cadastro">Criar Conta</button>
+                </div>
+            </form>
+            <p class="cadastro-help">Já possui uma conta? <a href="loginUsuario.html">Clique aqui.</a></p>
+
+            <div class="cadastro-status"></div>
+        </div>
+    </div>
+    <script src="js/cadastroUsuario.js"></script>
+</body>
+</html>
