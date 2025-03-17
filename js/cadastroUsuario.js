@@ -45,21 +45,37 @@ const cadastrarUsuario = () => {
 
         if(nome == "") {
             mostrarMensagem("Nome inválido, revise o campo e tente novamente", "erro");
+            inputNome.classList.add("input-error");
+            inputEmail.classList.remove("input-error");
+            inputSenha.classList.remove("input-error");
+            inputConfirmSenha.classList.remove("input-error");
             return;
         }
 
         if (!email.includes("@") || !email.includes(".") || email.length < 7) {
             mostrarMensagem("Email inválido, revise o campo e tente novamente", "erro");
+            inputNome.classList.remove("input-error");
+            inputEmail.classList.add("input-error");
+            inputSenha.classList.remove("input-error");
+            inputConfirmSenha.classList.remove("input-error");
             return;
         }
 
         if (senha.length < 6) {
             mostrarMensagem("A senha deve ter pelo menos 6 caracteres.", "erro");
+            inputNome.classList.remove("input-error");
+            inputEmail.classList.remove("input-error");
+            inputSenha.classList.add("input-error");
+            inputConfirmSenha.classList.remove("input-error");
             return;
         }
 
         if(confirmSenha != senha) {
             mostrarMensagem("As senhas não coincidem, revise os campos e tente novamente", "erro");
+            inputNome.classList.remove("input-error");
+            inputEmail.classList.remove("input-error");
+            inputSenha.classList.remove("input-error");
+            inputConfirmSenha.classList.add("input-error");
             return;
         }
 
@@ -83,6 +99,9 @@ const cadastrarUsuario = () => {
     .then(() => {
         mostrarMensagem('Cadastro realizado com sucesso!', 'sucesso');
         limparFormCadastro();
+        setTimeout( () => {
+            window.location.href = `./loginUsuario.html`;
+        }, 3000);
     })
     .catch(error => {
         console.error(error);
@@ -110,4 +129,8 @@ const limparFormCadastro = () => {
     inputEmail.value = '';
     inputSenha.value = '';
     inputConfirmSenha.value = '';
+    inputNome.classList.remove("input-error");
+    inputEmail.classList.remove("input-error");
+    inputSenha.classList.remove("input-error");
+    inputConfirmSenha.classList.remove("input-error");
 };
