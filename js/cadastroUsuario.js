@@ -98,10 +98,8 @@ const cadastrarUsuario = () => {
     })
     .then(() => {
         mostrarMensagem('Cadastro realizado com sucesso!', 'sucesso');
+        window.location.href = "./loginUsuario.html";
         limparFormCadastro();
-        setTimeout( () => {
-            window.location.href = `./loginUsuario.html`;
-        }, 3000);
     })
     .catch(error => {
         console.error(error);
